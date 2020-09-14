@@ -1,122 +1,61 @@
-![Adalab](https://beta.adalab.es/resources/images/adalab-logo-155x61-bg-white.png)
+<img src="https://raw.githubusercontent.com/seguramaria/codebusters/master/src/images/3.png" width="150"/>
 
-# Adalab web starter kit
+# Codebusters
 
-Ahoy! Este es nuestro Starter Kit creado en **node y gulp**. ¿Y qué es un Starter kit? Pues es una **plantilla de proyecto con funcionalidades preinstaladas y preconfiguradas**.
+## Proyecto web colaborativa maquetada con HTML y Sass
 
-Este Kit incluye un motor de plantillas HTML, el preprocesador SASS y un servidor local y muchas cosas más. El Kit nos ayuda a trabajar más cómodamente, nos automatiza tareas.
+En este proyecto vamos a desarrollar una primera web colaborativa. Para ello crearemos una web con la información social de todos los miembros del equipo.
 
-En el Kit hay 3 tipos de ficheros y carpetas:
+### Tecnologías usadas:
 
-- Los ficheros que están sueltos en la raíz del repositorio, como gulpfile.js, package.json... Son la configuración del proyecto y no necesitamos modificarlos.
-- La carpeta `src/`: son los ficheros de nuestra página web, como HTML, CSS, JS...
-- Las carpetas `public/` y `docs/`, que son generadas automáticamente cuando arrancamos el proyecto. El Kit lee los ficheros que hay dentro de `src/`, los procesa y los genera dentro de `public/` y `docs/`.
+      HTML, CSS, diseño responsive, GitHub pages, Sass, grid, gulp
 
-## Guía de inicio rápido
+### Especificaciones
 
-> **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/) para trabajar con este Starter Kit:
+- Se desarrollará una página web con las siguientes características:
+- Uso de HTML y Sass
+- Uso de mediaqueries y otras técnicas de diseño responsive para que la web se adapte al tamaño de pantalla de distintos dispositivos
+- Uso de git para el control de versiones del proyecto
+- Publicación del resultado en Internet usando GitHub Pages
 
-### Pasos a seguir cada vez que queremos arrancar un proyecto desde cero:
+#### La web tiene dos páginas:
 
-1. **Crea tu propio repositorio.**
-1. Descarga este **Starter kit desde GitHub**.
-   - No recomendamos que clones este repo ya que no podrás añadir commits.
-1. **Copia todos los ficheros** de este Starter kit en la carpeta raíz de tu repositorio.
-   - Recuerda que debes copiar **también los ficheros ocultos**.
-   - Si has decidido clonar este repo, no debes copiar la carpeta `.git`. Si lo haces estarás machacando tu propio repositorio.
-1. **Abre una terminal** en la carpeta raíz de tu repositorio.
-1. **Instala las dependencias** locales ejecutando en la terminal el comando:
+- Una página principal (Home) con la información principal sobre el equipo
+- Una página de contacto con un formulario para que puedan ponerse en contacto con nosotras
 
-```bash
-npm install
-```
+Todas las páginas tienen una cabecera (header) y un pie de página (footer). En la cabecera aparece el nombre del equipo y un menú de navegación que se mantiene fijo en la parte superior de la ventana al hacer scroll. En el pie de página aparece el copyright, otro menú y el logo de Adalab.
 
-### Pasos para arrancar el proyecto:
+En la página principal, aparece
 
-Una vez hemos instalado las dependencias, vamos a arrancar el proyecto. **El proyecto hay que arrancarlo cada vez que te pongas a programar.** Para ello ejecuta el comando:
+- Una ilustración del equipo
+- La frase (claim) del equipo
+- Una sección "equipo" con la descripción del mismo y nuestras fortalezas y debilidades
+- Una sección de "quiénes somos" con información resumida de cada miembro del equipo: nombre, foto, breve bio y enlaces sociales (Twitter, LinkedIn, GitHub y correo)
 
-```bash
-npm start
-```
+En la página de contacto hay un formulario que recoge información de contacto como nombre completo, email, teléfono y mensaje, y un botón para poder enviarlo.
 
-Este comando:
+Las páginas principal y de contacto tienen un diseño establecido, al que hemos debido de ajustarnos. El diseño está realizado para 3 tamaños de dispositivo:
+móvil, por debajo de 768px
+tablet, desde 768px hasta 1200px
+desktop, a partir de 1200px
 
-- **Abre una ventana de Chrome y muestra tu página web**, al igual que hace el plugin de VS Code Live Server (Go live).
-- También **observa** todos los ficheros que hay dentro de la carpeta `src/`, para que cada vez que modifiques un fichero **refresca tu página en Chrome**.
-- También **procesa los ficheros** HTML, SASS / CSS y JS y los **genera y guarda en la carpeta `public/`**. Por ejemplo:
-   - Convierte los ficheros SASS en CSS.
-   - Combina los diferentes ficheros de HTML y los agrupa en uno o varios ficheros HTML.
+#### Otros datos:
 
-Después de ejecutar `npm start` ya puedes empezar a editar todos los ficheros que están dentro de la carpeta `src/` y programar cómodamente.
+- Los iconos sociales los podéis sacar de Font Awesome, donde también podéis aprender a cómo usarla.
+- Las tipografías usadas en el diseño son Open Sans y Rubik, disponibles en Google Fonts.
+- Colores
+  Verde oscuro: #099d8d
 
-### Pasos para publicar el proyecto en GitHub Pages:
+  Verde claro: #14d9c4
 
-Para generar tu página para producción ejecuta el comando:
+  Blanco: #ffffff
 
-```bash
-npm run docs
-```
+  Negro: #000000
 
-Y a continuación:
+  Gris oscuro: #54585a
 
-1. Sube a tu repo la carpeta `docs/` que se te acaba de generar.
-1. Entra en la pestaña `settings` de tu repo.
-1. Y en el apartado de GitHub Pages activa la opción **master branch /docs folder**.
-1. Y ya estaría!!!
+  Gris claro: #b8b8b9
 
-Además, los comandos:
+  Gris de fondo: #f1f1f1
 
-```bash
-npm run push-docs
-```
-o
-
-```bash
-npm run deploy
-```
-
-son un atajo que nos genera la versión de producción y hace push de la carpeta `docs/` del tirón. Te recomendamos ver el fichero `package.json` para aprender cómo funciona.
-
-## Flujo de archivos con Gulp
-
-Estas tareas de Gulp producen el siguiente flujo de archivos:
-
-![Gulp flow](./gulp-flow.png)
-
-## `gulpfile.js` y `config.json`
-
-Nuestro **gulpfile.js** usa el fichero `config.json` de configuración con las rutas de los archivos a generar / observar.
-
-De esta manera separarmos las acciones que están en `gulpfile.js` de la configuración de las acciones que están en `config.json`.
-
-## Estructura de carpetas
-
-La estructura de carpetas tiene esta pinta:
-
-```
-src
- ├─ api // los ficheros de esta carpeta se copian en public/api/
- |  └─ data.json
- ├─ images
- |  └─ logo.jpg
- ├─ js // los ficheros de esta carpeta se concatenan en el fichero main.js y este se guarda en public/main.js
- |  ├─ main.js
- |  └─ events.js
- ├─ scss
- |  ├─ components
- |  ├─ core
- |  ├─ layout
- |  └─ pages
- └─ html
-    └─ partials
-```
-
-## Vídeotutoriales del Starter kit
-
-- [Qué es, trabajar con la versión de desarrollo y rutas relativas](https://www.youtube.com/watch?v=XwvhXvBijos)
-- [Migración de un proyecto, trabajar con la versión de producción y GitHub Pages](https://www.youtube.com/watch?v=qqGClcgt9Uc)
-- [Motor de plantillas](https://www.youtube.com/watch?v=4GwXOJ045Zg)
-
-## Falta algo?
-
-Echas de menos que el kit haga algo en concreto? Pidelo sin problema a través de las issues o si te animas a mejorarlo mándanos un PR :)
+Enlace a GitHub Pages para ver el resultado: http://beta.adalab.es/project-promo-j-module-1-team-2/
