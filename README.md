@@ -38,6 +38,11 @@ Las páginas principal y de contacto tienen un diseño establecido, al que hemos
 móvil, por debajo de 768px
 tablet, desde 768px hasta 1200px
 desktop, a partir de 1200px
+Diseño responsive:
+
+<img src="https://raw.githubusercontent.com/seguramaria/codebusters/master/src/images/responsive/1.png" width="200"/>
+<img src="https://raw.githubusercontent.com/seguramaria/codebusters/master/src/images/responsive/2.png" width="200"/>
+<img src="https://raw.githubusercontent.com/seguramaria/codebusters/master/src/images/responsive/3.png" width="200"/>
 
 #### Otros datos:
 
